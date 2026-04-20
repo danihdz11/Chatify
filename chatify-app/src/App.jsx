@@ -23,15 +23,19 @@ function App() {
 
   return (
     <>
-      <h1>Chatify</h1>
-      <ManageConnection />
+      <h1 className='flex items-center justify-center text-4xl font-bold mb-8'>Chatify</h1>
+      <div className='flex items-center justify-center'>
+        <ManageConnection />
+      </div>
       <div className='flex items-center justify-between mt-10 w-full'>
         <div className='w-1/4 h-screen border-3 border-black'>
           <Channels />
         </div>
 
-        <div className='flex flex-col items-center justify-center w-1/2 h-screen border-3 border-black'>
-          <Chats />
+        <div className='flex flex-col w-1/2 h-screen border-3 border-black'>
+          <div className='flex-1 overflow-y-auto'>
+            <Chats />
+          </div>
           <MyForm />
         </div>
 

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Users = () => {
   return (
-    <div>Users</div>
+    <div>
+      <h2 className='flex items-center justify-center text-xl font-bold'>Users</h2>
+    </div>
   )
 }
 

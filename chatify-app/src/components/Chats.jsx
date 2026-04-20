@@ -17,10 +17,13 @@ const Chats = () => {
 
   return (
     <>
-      <div>Chats</div>
-      {message?.map((m) => (
-        <p>{m}</p>
-      ))}
+      <div>
+        <h2 className='flex items-center justify-center text-xl font-bold mb-5'>Chats</h2>
+
+        {message?.map((m) => (
+          <p>{m}</p>
+        ))}
+      </div>
     </>
   )
 }

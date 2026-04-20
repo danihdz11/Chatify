@@ -19,13 +19,15 @@ const ManageConnection = () => {
 
   return (
     <div>
-        <button 
-        className='cursor-pointer'
-        onClick={() => handleConection('on')}>Connect</button>
+        <div className='flex gap-7'>
+            <button 
+            className='cursor-pointer border-2 border-black py-4 px-5 rounded-full text-lg'
+            onClick={() => handleConection('on')}>Connect</button>
 
-        <button 
-        className='cursor-pointer'
-        onClick={() => handleConection('off')}>Disconnect</button>
+            <button 
+            className='cursor-pointer border-2 border-black py-4 px-5 rounded-full text-lg'
+            onClick={() => handleConection('off')}>Disconnect</button>
+        </div>
     </div>
   )
 }
