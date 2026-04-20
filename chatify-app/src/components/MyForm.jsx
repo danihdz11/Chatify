@@ -11,7 +11,9 @@ const MyForm = () => {
 
     const handleClick = (e) => {
         e.preventDefault()
-        socket.emit('chat message', message)
+        const trimmed = message.trim()
+        if (!trimmed) return
+        socket.emit('chat message', trimmed)
         setMessage('')
     }
 
@@ -23,10 +25,10 @@ const MyForm = () => {
                 type="text"
                 name='message'
                 value={message}
-                onChange={handleOnChange} 
+                onChange={handleOnChange}
             />
             <button 
-            className='px-4 py-2 bg-black text-white rounded-full cursor-pointer hover:bg-sky-700'
+            className='px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 rounded-full cursor-pointer active:scale-95 active:translate-y-1 transition duration-150'
             onClick={handleClick}>Send</button>
         </div>
     </div>

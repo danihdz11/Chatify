@@ -47,17 +47,20 @@ io.on('connection', async (socket) => {
   }
 
   socket.on('chat message', async (msg) => {
-    console.log('message: ' + msg);
+    const content = typeof msg === 'string' ? msg.trim() : '';
+    if (!content) return;
+
+    console.log('message: ' + content);
     let result;
     try {
       // store the message in the database
-      result = await db.run('INSERT INTO messages (content) VALUES (?)', msg);
+      result = await db.run('INSERT INTO messages (content) VALUES (?)', content);
     } catch (e) {
       // TODO handle the failure
       return;
     }
     // include the offset with the message
-    io.emit('chat message', msg, result.lastID);
+    io.emit('chat message', content, result.lastID);
   });
 
   socket.on('disconnect', () => {

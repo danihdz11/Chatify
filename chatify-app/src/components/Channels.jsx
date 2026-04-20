@@ -3,7 +3,7 @@ import React from 'react'
 const Channels = () => {
   return (
     <div>
-      <h2 className='flex items-center justify-center text-xl font-bold'>Channels</h2>
+      <h2 className='flex items-center justify-center text-4xl font-bold'>Channels</h2>
     </div>
   )
 }

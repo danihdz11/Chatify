@@ -18,7 +18,7 @@ const Chats = () => {
   return (
     <>
       <div>
-        <h2 className='flex items-center justify-center text-xl font-bold mb-5'>Chats</h2>
+        <h2 className='flex items-center justify-center text-4xl font-bold mb-5'>Chats</h2>
 
         {message?.map((m) => (
           <p>{m}</p>
